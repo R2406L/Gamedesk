@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record model="ir.ui.view" id="gamedesk_games_tree">
+        <field name="name">Gamedesk games tree view</field>
+        <field name="model">gamedesk.game</field>
+        <field name="arch" type="xml">
+            <tree string="Games list" default_order="date_start" create='true' edit='true'>
+                <field name="name"/>
+		<field name="gm_id"/>
+                <field name="engine_id"/>
+                <field name="setting_id"/>
+                <field name="date_start"/>
+                <field name="free_chairs" widget="progressbar"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="gamedesk_games_form">
+        <field name="name">Gamedesk games form view</field>
+        <field name="model">gamedesk.game</field>
+        <field name="arch" type="xml">
+            <form string="Game" create="true" edit="true">
+                <style>
+                    .gamedesk-img img { max-height: 300px; max-width: 200px; }
+                    .o_field_widget.o_field_pdf_viewer .o_pdfview_iframe {
+                        width: 100% !important;
+                        min-height: 600px;
+                        height: auto;
+                        border: 0;
+                        margin-top: 10px;
+                    }
+                </style>
+                <sheet>
+                    <group>
+                        <group string="Characteristics">
+                            <field name="name"/>
+                            <field name="duration"/>
+                            <field name="date_start"/>
+                            <field name="minimal_players"/>
+                            <field name="gm_id"/>
+                            <field name="engine_id"/>
+                            <field name="setting_id"/>
+                            <field name="next_id"/>
+                            <field name="free_chairs" widget="percentpie"/>
+                        </group>
+                        <div class="oe_row">
+                            <field name="image" class="gamedesk-img" widget="image"/>
+                        </div>
+                    </group>
+                    <notebook>
+                        <page string="Description">
+                            <field name="description" widget="html"/>
+                        </page>
+                        <page string="Players">
+                            <field name="player_ids">
+                                <kanban create="true" delete="true">
+                                    <field name="avatar_128"/>
+                                    <field name="name"/>
+
+                                    <templates>
+                                        <t t-name="kanban-box">
+                                            <div t-attf-class="oe_kanban_global_click">
+                                                <div class="oe_kanban_details">
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+                                                            <div class="o_kanban_image">
+                                                                <field name="avatar_128" widget="image"/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-9">
+                                                            <strong><field name="name"/></strong><br/>
+                                                            Status: 
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </t>
+                                    </templates>
+                                </kanban>
+                            </field>
+                        </page>
+                    </notebook>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="gamedesk_games_search_view" model="ir.ui.view">
+        <field name="name">Gamedesk games search</field>
+        <field name="model">gamedesk.game</field>
+        <field name="arch" type="xml">
+	    <filter
+                name="gamedesk_mygames"
+                string="My games"
+                domain="[('is_mine', '=', True)]"/>
+	    <filter
+                name="gamedesk_actual"
+                string="Available games"
+                domain="[('is_actual', '=', True)]"/>
+            <search string="Gamedesk games search">
+                <field name="name"/>
+                <field name="gm_id"/>
+                <field name="engine_id"/>
+                <field name="setting_id"/>
+		<searchpanel>
+                    <field name="gm_id"/>
+                    <field name="engine_id"/>
+                    <field name="setting_id"/>
+                </searchpanel>
+            </search>
+        </field>
+    </record>
+
+    <record id="gamedesk_games_actions" model="ir.actions.act_window">
+        <field name="name">Gamedesk games action</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">gamedesk.game</field>
+	<field name="context">{"search_default_gamedesk_actual":1}</field>
+        <field name="view_id" ref="gamedesk_games_tree"/>
+        <field name="view_ids" eval="[(5, 0, 0),
+                                        (0, 0, {'view_mode': 'tree', 'view_id': ref('gamedesk_games_tree')}),
+                                        (0, 0, {'view_mode': 'form', 'view_id': ref('gamedesk_games_form')})]"/>
+    </record>
+</odoo>

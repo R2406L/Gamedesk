@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_gamedesk_game_user,gamedesk.game.user,model_gamedesk_game,gamedesk_user,1,1,1,1
+access_gamedesk_game_engine_user,gamedesk.game_engine.user,model_gamedesk_game_engine,gamedesk_user,1,1,1,1
+access_gamedesk_game_setting_user,gamedesk.game_setting.user,model_gamedesk_game_setting,gamedesk_user,1,1,1,1
