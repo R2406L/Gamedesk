@@ -1,0 +1,18 @@
+<odoo>
+    <record model="ir.module.category" id="dnd5e_management">
+        <field name="name">Dungeons and Dragons management</field>
+        <field name="description">Access to management Dungeons and Dragons module</field>
+        <field name="sequence">20</field>
+    </record>
+
+    <record id="dnd5e_user" model="res.groups">
+        <field name="name">User</field>
+        <field name="category_id" ref="dnd5e_management"/>
+    </record>
+
+    <record id="dnd5e_administrator" model="res.groups">
+        <field name="name">Administrator</field>
+        <field name="category_id" ref="dnd5e_management"/>
+	    <field name="implied_ids" eval="[(4, ref('dnd5e_user'))]"/>
+    </record>
+</odoo>

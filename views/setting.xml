@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record model="ir.ui.view" id="gamedesk_game_setting_tree">
+        <field name="name">Gamedesk game setting tree view</field>
+        <field name="model">gamedesk.game_setting</field>
+        <field name="arch" type="xml">
+            <tree string="Games list" default_order="name" create='true' edit='true' editable="bottom">
+                <field name="name"/>
+                <field name="engine_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="gamedesk_game_setting_actions" model="ir.actions.act_window">
+        <field name="name">Gamedesk game setting action</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">gamedesk.game_setting</field>
+        <field name="view_id" ref="gamedesk_game_setting_tree"/>
+        <field name="view_ids" eval="[(5, 0, 0), (0, 0, {'view_mode': 'tree', 'view_id': ref('gamedesk_game_setting_tree')})]"/>
+    </record>
+</odoo>

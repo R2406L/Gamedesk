@@ -1,0 +1,351 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#       * gamedesk
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0-20230527\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-25 08:29+0000\n"
+"PO-Revision-Date: 2025-03-25 08:29+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: gamedesk
+#: model_terms:ir.ui.view,arch_db:gamedesk.gamedesk_games_form
+msgid ""
+"<br/>\n"
+"                                                            Status:"
+msgstr ""
+
+#. module: gamedesk
+#: model:ir.module.category,description:gamedesk.gamedesk_management
+msgid "Access to management game schedules"
+msgstr "Доступ к расписанию игр"
+
+#. module: gamedesk
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game__message_needaction
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_engine__message_needaction
+msgid "Action Needed"
+msgstr "Необходимое действие"
+
+#. module: gamedesk
+#: model:res.groups,name:gamedesk.gamedesk_administrator
+msgid "Administrator"
+msgstr "Администратор"
+
+#. module: gamedesk
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game__message_attachment_count
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_engine__message_attachment_count
+msgid "Attachment Count"
+msgstr "Количество вложений"
+
+#. module: gamedesk
+#: model_terms:ir.ui.view,arch_db:gamedesk.gamedesk_games_search_view
+msgid "Available games"
+msgstr "Будущие игры"
+
+#. module: gamedesk
+#: model_terms:ir.ui.view,arch_db:gamedesk.gamedesk_games_form
+msgid "Characteristics"
+msgstr "Характеристики"
+
+#. module: gamedesk
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game__create_uid
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_engine__create_uid
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_setting__create_uid
+msgid "Created by"
+msgstr "Создано"
+
+#. module: gamedesk
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game__create_date
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_engine__create_date
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_setting__create_date
+msgid "Created on"
+msgstr "Создано"
+
+#. module: gamedesk
+#: model_terms:ir.ui.view,arch_db:gamedesk.gamedesk_games_form
+msgid "Description"
+msgstr "Описание"
+
+#. module: gamedesk
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game__display_name
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_engine__display_name
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_setting__display_name
+msgid "Display Name"
+msgstr "Название"
+
+#. module: gamedesk
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game__duration
+msgid "Duration, h"
+msgstr "Длительность, ч"
+
+#. module: gamedesk
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_setting__engine_id
+msgid "Engine"
+msgstr "Система"
+
+#. module: gamedesk
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game__message_follower_ids
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_engine__message_follower_ids
+msgid "Followers"
+msgstr "Подписчики"
+
+#. module: gamedesk
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game__message_partner_ids
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_engine__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Подписчики (Внешние)"
+
+#. module: gamedesk
+#: model_terms:ir.ui.view,arch_db:gamedesk.gamedesk_games_form
+msgid "Game"
+msgstr "Игра"
+
+#. module: gamedesk
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game__gm_id
+#: model:res.groups,name:gamedesk.gamedesk_publisher
+msgid "Game Master"
+msgstr "Мастер"
+
+#. module: gamedesk
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game__engine_id
+msgid "Game engine"
+msgstr "Игровая система"
+
+#. module: gamedesk
+#: model:ir.model,name:gamedesk.model_gamedesk_game_engine
+msgid "Game engine model definition"
+msgstr "Описание модели игровой системы"
+
+#. module: gamedesk
+#: model:ir.ui.menu,name:gamedesk.gamedesk_games_engine_menu
+msgid "Game engines"
+msgstr "Игровые системы"
+
+#. module: gamedesk
+#: model:ir.model,name:gamedesk.model_gamedesk_game
+msgid "Game model definition"
+msgstr "Описание модели игры"
+
+#. module: gamedesk
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game__setting_id
+#: model:ir.ui.menu,name:gamedesk.gamedesk_games_setting_menu
+msgid "Game setting"
+msgstr "Сеттинг приключения"
+
+#. module: gamedesk
+#: model:ir.model,name:gamedesk.model_gamedesk_game_setting
+msgid "Game setting model definition"
+msgstr "Модель сеттинга"
+
+#. module: gamedesk
+#: model:ir.ui.menu,name:gamedesk.gamedesk_menu
+msgid "GameDesk"
+msgstr "НРИ Партии"
+
+#. module: gamedesk
+#: model:ir.actions.act_window,name:gamedesk.gamedesk_game_engine_actions
+msgid "Gamedesk game engine action"
+msgstr "Игровая система"
+
+#. module: gamedesk
+#: model:ir.actions.act_window,name:gamedesk.gamedesk_game_setting_actions
+msgid "Gamedesk game setting action"
+msgstr "Настройки"
+
+#. module: gamedesk
+#: model:ir.actions.act_window,name:gamedesk.gamedesk_games_actions
+msgid "Gamedesk games action"
+msgstr "НРИ игры"
+
+#. module: gamedesk
+#: model_terms:ir.ui.view,arch_db:gamedesk.gamedesk_games_search_view
+msgid "Gamedesk games search"
+msgstr "Поиск игр"
+
+#. module: gamedesk
+#: model:ir.module.category,name:gamedesk.gamedesk_management
+msgid "Gamedesk management"
+msgstr "Управление партиями"
+
+#. module: gamedesk
+#: model:ir.ui.menu,name:gamedesk.gamedesk_games_menu
+msgid "Games"
+msgstr "Игры"
+
+#. module: gamedesk
+#: model_terms:ir.ui.view,arch_db:gamedesk.gamedesk_game_engine_tree
+#: model_terms:ir.ui.view,arch_db:gamedesk.gamedesk_game_setting_tree
+#: model_terms:ir.ui.view,arch_db:gamedesk.gamedesk_games_tree
+msgid "Games list"
+msgstr "Список игр"
+
+#. module: gamedesk
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game__has_message
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_engine__has_message
+msgid "Has Message"
+msgstr "Есть сообщения"
+
+#. module: gamedesk
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game__id
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_engine__id
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_setting__id
+msgid "ID"
+msgstr "№"
+
+#. module: gamedesk
+#: model:ir.model.fields,help:gamedesk.field_gamedesk_game__message_needaction
+#: model:ir.model.fields,help:gamedesk.field_gamedesk_game_engine__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Если выбрано, то необходимо отреагировать"
+
+#. module: gamedesk
+#: model:ir.model.fields,help:gamedesk.field_gamedesk_game__message_has_error
+#: model:ir.model.fields,help:gamedesk.field_gamedesk_game_engine__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Если выбрано, то имеются проблемы с доставкой"
+
+#. module: gamedesk
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game__image
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_engine__image
+msgid "Illustration"
+msgstr "Иллюстрации"
+
+#. module: gamedesk
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game__message_is_follower
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_engine__message_is_follower
+msgid "Is Follower"
+msgstr "Подписчик"
+
+#. module: gamedesk
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game__is_actual
+msgid "Is actual"
+msgstr "Актуально"
+
+#. module: gamedesk
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game__is_mine
+msgid "Is my game"
+msgstr "Мои игры"
+
+#. module: gamedesk
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game____last_update
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_engine____last_update
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_setting____last_update
+msgid "Last Modified on"
+msgstr "Последнее изменение"
+
+#. module: gamedesk
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game__write_uid
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_engine__write_uid
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_setting__write_uid
+msgid "Last Updated by"
+msgstr "Последнее обновление"
+
+#. module: gamedesk
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game__write_date
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_engine__write_date
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_setting__write_date
+msgid "Last Updated on"
+msgstr "Последнее обновление"
+
+#. module: gamedesk
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game__message_main_attachment_id
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_engine__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Основное вложение"
+
+#. module: gamedesk
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game__message_has_error
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_engine__message_has_error
+msgid "Message Delivery error"
+msgstr "Ошибка доставки сообщения"
+
+#. module: gamedesk
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game__message_ids
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_engine__message_ids
+msgid "Messages"
+msgstr "Сообщения"
+
+#. module: gamedesk
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game__minimal_players
+msgid "Minimal players"
+msgstr "Минимальное количество игроков"
+
+#. module: gamedesk
+#: model_terms:ir.ui.view,arch_db:gamedesk.gamedesk_games_search_view
+msgid "My games"
+msgstr "Мои игры"
+
+#. module: gamedesk
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game__name
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_engine__name
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_setting__name
+msgid "Name"
+msgstr "Название"
+
+#. module: gamedesk
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game__next_id
+msgid "Next session link"
+msgstr "Ссылка на следующую сессию"
+
+#. module: gamedesk
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game__message_needaction_counter
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_engine__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Количество событий"
+
+#. module: gamedesk
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game__message_has_error_counter
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_engine__message_has_error_counter
+msgid "Number of errors"
+msgstr "Количество ошибок"
+
+#. module: gamedesk
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game__free_chairs
+msgid "Number of free chairs"
+msgstr "Количество свободных мест"
+
+#. module: gamedesk
+#: model:ir.model.fields,help:gamedesk.field_gamedesk_game__message_needaction_counter
+#: model:ir.model.fields,help:gamedesk.field_gamedesk_game_engine__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Количество сообщений необходимых для действий"
+
+#. module: gamedesk
+#: model:ir.model.fields,help:gamedesk.field_gamedesk_game__message_has_error_counter
+#: model:ir.model.fields,help:gamedesk.field_gamedesk_game_engine__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Количество сообщений с ошибками доставки"
+
+#. module: gamedesk
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game__player_ids
+#: model_terms:ir.ui.view,arch_db:gamedesk.gamedesk_games_form
+msgid "Players"
+msgstr "Игроки"
+
+#. module: gamedesk
+#: model:ir.ui.menu,name:gamedesk.gamedesk_config_menu
+msgid "Settings"
+msgstr "Настройки"
+
+#. module: gamedesk
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game__description
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_engine__description
+msgid "Short description"
+msgstr "Короткое описание"
+
+#. module: gamedesk
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game__date_start
+msgid "Start play game"
+msgstr "Начало партии"
+
+#. module: gamedesk
+#: model:res.groups,name:gamedesk.gamedesk_user
+msgid "User"
+msgstr "Пользователь"
