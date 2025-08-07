@@ -40,7 +40,6 @@
                             <field name="gm_id"/>
                             <field name="engine_id"/>
                             <field name="setting_id"/>
-                            <field name="next_id"/>
                             <field name="free_chairs" widget="percentpie"/>
                         </group>
                         <div class="oe_row">
