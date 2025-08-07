@@ -21,7 +21,6 @@ class Game(models.Model):
     player_ids = fields.Many2many('res.partner', string='Players')
     engine_id = fields.Many2one('gamedesk.game_engine', string='Game engine')
     setting_id = fields.Many2one('gamedesk.game_setting', string='Game setting', domain='[("engine_id", "=", engine_id)]')
-    next_id = fields.Many2one('gamedesk.game', string='Next session link')
 
     free_chairs = fields.Integer('Number of free chairs', compute='_get_chairs')
     is_actual = fields.Boolean('Is actual', compute='_get_actual', search='_search_actual')
@@ -36,6 +35,7 @@ class Game(models.Model):
         recs = self.search([]).filtered(lambda s: s.date_start > today)
         if recs:
            return [('id', 'in', recs.ids)]
+        return [('id', 'in', [])]
 
     @api.depends('date_start')
     def _get_actual(self):
