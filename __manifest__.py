@@ -1,10 +1,7 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Dungeons and Dragons 5 edition",
-    'description': """
-        Dungeons & Dragons 5e
-        Role play board game engine
-    """,
+    'name': "GameDesk role play",
+    'description': "GameDesk role play scheduler",
     'author': "R2406",
     'website': "https://svgun.ru/odoo",
     'category': 'Services',
