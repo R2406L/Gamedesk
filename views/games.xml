@@ -6,7 +6,7 @@
         <field name="arch" type="xml">
             <tree string="Games list" default_order="date_start" create='true' edit='true'>
                 <field name="name"/>
-		<field name="gm_id"/>
+		        <field name="gm_id"/>
                 <field name="engine_id"/>
                 <field name="setting_id"/>
                 <field name="date_start"/>

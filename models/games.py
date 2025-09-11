@@ -17,8 +17,8 @@ class Game(models.Model):
     date_start = fields.Datetime('Start play game', required=True)
     minimal_players = fields.Integer('Minimal players', default=4)
 
-    gm_id = fields.Many2one('res.partner', string='Game Master')
-    player_ids = fields.Many2many('res.partner', string='Players')
+    gm_id = fields.Many2one('res.partner', string='Game Master', domain='[("is_dungeon_master", "=", True)]')
+    player_ids = fields.Many2many('res.partner', string='Players', domain='[("is_dungeon_seeker", "=", True)]')
     engine_id = fields.Many2one('gamedesk.game_engine', string='Game engine')
     setting_id = fields.Many2one('gamedesk.game_setting', string='Game setting', domain='[("engine_id", "=", engine_id)]')
 
