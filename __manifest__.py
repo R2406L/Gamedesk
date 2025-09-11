@@ -20,7 +20,10 @@
 
 	'views/games.xml',
 	'views/engine.xml',
-        'views/setting.xml',
+    'views/setting.xml',
 	'views/_menu.xml',
+    
+    'views/_inherits/res_partner.xml',
+	
     ],
 }
