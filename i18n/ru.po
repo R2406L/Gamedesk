@@ -1,13 +1,13 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#       * gamedesk
+# 	* gamedesk
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0-20230527\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-25 08:29+0000\n"
-"PO-Revision-Date: 2025-03-25 08:29+0000\n"
+"POT-Creation-Date: 2025-10-01 11:40+0000\n"
+"PO-Revision-Date: 2025-10-01 11:40+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -21,17 +21,36 @@ msgid ""
 "<br/>\n"
 "                                                            Status:"
 msgstr ""
+"<br/>\n"
+"                                                            Статус:"
 
 #. module: gamedesk
 #: model:ir.module.category,description:gamedesk.gamedesk_management
-msgid "Access to management game schedules"
+msgid "Access to Gamedesk management module"
 msgstr "Доступ к расписанию игр"
+
+#. module: gamedesk
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_achievement_wizard__achievement_id
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_seeker_achievement__achievement_id
+msgid "Achievement"
+msgstr "Достижения"
+
+#. module: gamedesk
+#: model:ir.model.fields,field_description:gamedesk.field_res_partner__ac_score
+#: model:ir.model.fields,field_description:gamedesk.field_res_users__ac_score
+msgid "Achievement raiting"
+msgstr "Рейтинг достижений"
 
 #. module: gamedesk
 #: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game__message_needaction
 #: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_engine__message_needaction
 msgid "Action Needed"
 msgstr "Необходимое действие"
+
+#. module: gamedesk
+#: model:ir.model,name:gamedesk.model_gamedesk_game_achievement_wizard
+msgid "Add achievement to partner wizard definition"
+msgstr "Присвоение достижения"
 
 #. module: gamedesk
 #: model:res.groups,name:gamedesk.gamedesk_administrator
@@ -50,32 +69,61 @@ msgid "Available games"
 msgstr "Будущие игры"
 
 #. module: gamedesk
+#: model_terms:ir.ui.view,arch_db:gamedesk.gamedesk_game_achievement_wizard_view_form
+msgid "Cancel"
+msgstr "Отмена"
+
+#. module: gamedesk
+#: model_terms:ir.ui.view,arch_db:gamedesk.gamedesk_game_achievement_form
 #: model_terms:ir.ui.view,arch_db:gamedesk.gamedesk_games_form
 msgid "Characteristics"
 msgstr "Характеристики"
 
 #. module: gamedesk
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_seeker_achievement__date
+msgid "Collected at"
+msgstr "Получено"
+
+#. module: gamedesk
+#: model:ir.model,name:gamedesk.model_res_partner
+msgid "Contact"
+msgstr "Игрок"
+
+#. module: gamedesk
 #: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game__create_uid
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_achievement__create_uid
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_achievement_wizard__create_uid
 #: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_engine__create_uid
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_seeker_achievement__create_uid
 #: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_setting__create_uid
 msgid "Created by"
 msgstr "Создано"
 
 #. module: gamedesk
 #: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game__create_date
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_achievement__create_date
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_achievement_wizard__create_date
 #: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_engine__create_date
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_seeker_achievement__create_date
 #: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_setting__create_date
 msgid "Created on"
 msgstr "Создано"
 
 #. module: gamedesk
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_achievement__description
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_achievement_wizard__comment
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_seeker_achievement__comment
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_seeker_achievement__description
 #: model_terms:ir.ui.view,arch_db:gamedesk.gamedesk_games_form
 msgid "Description"
 msgstr "Описание"
 
 #. module: gamedesk
 #: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game__display_name
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_achievement__display_name
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_achievement_wizard__display_name
 #: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_engine__display_name
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_seeker_achievement__display_name
 #: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_setting__display_name
 msgid "Display Name"
 msgstr "Название"
@@ -103,15 +151,47 @@ msgid "Followers (Partners)"
 msgstr "Подписчики (Внешние)"
 
 #. module: gamedesk
+#: model:ir.actions.act_window,name:gamedesk.gamedesk_game_achievement_wizard_action
+msgid "Gain achievement action"
+msgstr "Выдать достижение"
+
+#. module: gamedesk
+#: model_terms:ir.ui.view,arch_db:gamedesk.gamedesk_game_achievement_wizard_view_form
+msgid "Gain achievement wizard"
+msgstr "Выдать достижени"
+
+#. module: gamedesk
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_achievement__collected_ids
+#: model:ir.model.fields,field_description:gamedesk.field_res_partner__achievement_ids
+#: model:ir.model.fields,field_description:gamedesk.field_res_users__achievement_ids
+msgid "Gained achievements"
+msgstr "Полученные достижения"
+
+#. module: gamedesk
 #: model_terms:ir.ui.view,arch_db:gamedesk.gamedesk_games_form
 msgid "Game"
 msgstr "Игра"
 
 #. module: gamedesk
 #: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game__gm_id
-#: model:res.groups,name:gamedesk.gamedesk_publisher
+#: model:res.groups,name:gamedesk.gamedesk_gm
 msgid "Game Master"
 msgstr "Мастер"
+
+#. module: gamedesk
+#: model_terms:ir.ui.view,arch_db:gamedesk.gamedesk_game_achievement_form
+msgid "Game achievement"
+msgstr "Достижения"
+
+#. module: gamedesk
+#: model:ir.model,name:gamedesk.model_gamedesk_game_achievement
+msgid "Game achievement model definition"
+msgstr "Модель достижений"
+
+#. module: gamedesk
+#: model:ir.ui.menu,name:gamedesk.gamedesk_games_achievement_menu
+msgid "Game achievements"
+msgstr "Достижения"
 
 #. module: gamedesk
 #: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game__engine_id
@@ -134,6 +214,11 @@ msgid "Game model definition"
 msgstr "Описание модели игры"
 
 #. module: gamedesk
+#: model:ir.model,name:gamedesk.model_gamedesk_game_seeker_achievement
+msgid "Game seeker achievement model definition"
+msgstr "Достижения искателя приключений"
+
+#. module: gamedesk
 #: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game__setting_id
 #: model:ir.ui.menu,name:gamedesk.gamedesk_games_setting_menu
 msgid "Game setting"
@@ -148,6 +233,16 @@ msgstr "Модель сеттинга"
 #: model:ir.ui.menu,name:gamedesk.gamedesk_menu
 msgid "GameDesk"
 msgstr "НРИ Партии"
+
+#. module: gamedesk
+#: model_terms:ir.ui.view,arch_db:gamedesk.gamedesk_res_partner_inherit
+msgid "Gamedesk"
+msgstr "НРИ партия"
+
+#. module: gamedesk
+#: model:ir.actions.act_window,name:gamedesk.gamedesk_game_achievement_actions
+msgid "Gamedesk game achievement action"
+msgstr "Достижения"
 
 #. module: gamedesk
 #: model:ir.actions.act_window,name:gamedesk.gamedesk_game_engine_actions
@@ -180,11 +275,17 @@ msgid "Games"
 msgstr "Игры"
 
 #. module: gamedesk
+#: model_terms:ir.ui.view,arch_db:gamedesk.gamedesk_game_achievement_tree
 #: model_terms:ir.ui.view,arch_db:gamedesk.gamedesk_game_engine_tree
 #: model_terms:ir.ui.view,arch_db:gamedesk.gamedesk_game_setting_tree
 #: model_terms:ir.ui.view,arch_db:gamedesk.gamedesk_games_tree
 msgid "Games list"
 msgstr "Список игр"
+
+#. module: gamedesk
+#: model_terms:ir.ui.view,arch_db:gamedesk.gamedesk_res_partner_inherit
+msgid "Get another one..."
+msgstr "Выдать еще одно..."
 
 #. module: gamedesk
 #: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game__has_message
@@ -194,7 +295,10 @@ msgstr "Есть сообщения"
 
 #. module: gamedesk
 #: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game__id
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_achievement__id
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_achievement_wizard__id
 #: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_engine__id
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_seeker_achievement__id
 #: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_setting__id
 msgid "ID"
 msgstr "№"
@@ -213,9 +317,17 @@ msgstr "Если выбрано, то имеются проблемы с дос�
 
 #. module: gamedesk
 #: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game__image
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_achievement__image
 #: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_engine__image
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_seeker_achievement__image
 msgid "Illustration"
 msgstr "Иллюстрации"
+
+#. module: gamedesk
+#: model:ir.model.fields,field_description:gamedesk.field_res_partner__is_admin_validation
+#: model:ir.model.fields,field_description:gamedesk.field_res_users__is_admin_validation
+msgid "Is Admin Validation"
+msgstr "Администратор"
 
 #. module: gamedesk
 #: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game__message_is_follower
@@ -224,9 +336,27 @@ msgid "Is Follower"
 msgstr "Подписчик"
 
 #. module: gamedesk
+#: model:ir.model.fields,field_description:gamedesk.field_res_partner__is_gm_validation
+#: model:ir.model.fields,field_description:gamedesk.field_res_users__is_gm_validation
+msgid "Is Gm Validation"
+msgstr "Мастер подземелья"
+
+#. module: gamedesk
 #: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game__is_actual
 msgid "Is actual"
 msgstr "Актуально"
+
+#. module: gamedesk
+#: model:ir.model.fields,field_description:gamedesk.field_res_partner__is_dungeon_master
+#: model:ir.model.fields,field_description:gamedesk.field_res_users__is_dungeon_master
+msgid "Is dungeon Master"
+msgstr "Мастер подземелья"
+
+#. module: gamedesk
+#: model:ir.model.fields,field_description:gamedesk.field_res_partner__is_dungeon_seeker
+#: model:ir.model.fields,field_description:gamedesk.field_res_users__is_dungeon_seeker
+msgid "Is dungeon Seeker"
+msgstr "Искатель приключения"
 
 #. module: gamedesk
 #: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game__is_mine
@@ -235,21 +365,30 @@ msgstr "Мои игры"
 
 #. module: gamedesk
 #: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game____last_update
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_achievement____last_update
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_achievement_wizard____last_update
 #: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_engine____last_update
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_seeker_achievement____last_update
 #: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_setting____last_update
 msgid "Last Modified on"
 msgstr "Последнее изменение"
 
 #. module: gamedesk
 #: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game__write_uid
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_achievement__write_uid
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_achievement_wizard__write_uid
 #: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_engine__write_uid
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_seeker_achievement__write_uid
 #: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_setting__write_uid
 msgid "Last Updated by"
 msgstr "Последнее обновление"
 
 #. module: gamedesk
 #: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game__write_date
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_achievement__write_date
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_achievement_wizard__write_date
 #: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_engine__write_date
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_seeker_achievement__write_date
 #: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_setting__write_date
 msgid "Last Updated on"
 msgstr "Последнее обновление"
@@ -284,15 +423,12 @@ msgstr "Мои игры"
 
 #. module: gamedesk
 #: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game__name
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_achievement__name
 #: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_engine__name
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_seeker_achievement__name
 #: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_setting__name
 msgid "Name"
 msgstr "Название"
-
-#. module: gamedesk
-#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game__next_id
-msgid "Next session link"
-msgstr "Ссылка на следующую сессию"
 
 #. module: gamedesk
 #: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game__message_needaction_counter
@@ -324,10 +460,43 @@ msgid "Number of messages with delivery error"
 msgstr "Количество сообщений с ошибками доставки"
 
 #. module: gamedesk
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_achievement_wizard__partner_id
+msgid "Partner"
+msgstr "Пользователь"
+
+#. module: gamedesk
+#: model_terms:ir.ui.view,arch_db:gamedesk.gamedesk_game_achievement_wizard_view_form
+#: model_terms:ir.ui.view,arch_db:gamedesk.gamedesk_res_partner_inherit
+msgid "Pic"
+msgstr "Изображение"
+
+#. module: gamedesk
 #: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game__player_ids
 #: model_terms:ir.ui.view,arch_db:gamedesk.gamedesk_games_form
 msgid "Players"
 msgstr "Игроки"
+
+#. module: gamedesk
+#: model_terms:ir.ui.view,arch_db:gamedesk.gamedesk_game_achievement_kanban
+msgid "Preview"
+msgstr "Предпросмотр"
+
+#. module: gamedesk
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_achievement__score
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_seeker_achievement__score
+msgid "Score"
+msgstr "Очки"
+
+#. module: gamedesk
+#: model_terms:ir.ui.view,arch_db:gamedesk.gamedesk_res_partner_inherit
+msgid "Scores"
+msgstr "Очки"
+
+#. module: gamedesk
+#: model:ir.model.fields,field_description:gamedesk.field_gamedesk_game_seeker_achievement__partner_id
+#: model:res.groups,name:gamedesk.gamedesk_seeker
+msgid "Seeker"
+msgstr "Искатель приключений"
 
 #. module: gamedesk
 #: model:ir.ui.menu,name:gamedesk.gamedesk_config_menu
@@ -346,6 +515,26 @@ msgid "Start play game"
 msgstr "Начало партии"
 
 #. module: gamedesk
-#: model:res.groups,name:gamedesk.gamedesk_user
-msgid "User"
-msgstr "Пользователь"
+#: model_terms:ir.ui.view,arch_db:gamedesk.gamedesk_game_achievement_wizard_view_form
+msgid "Submit"
+msgstr "Сохранить"
+
+#. module: gamedesk
+#: model:ir.model.fields,field_description:gamedesk.field_res_partner__total_score
+#: model:ir.model.fields,field_description:gamedesk.field_res_users__total_score
+msgid "Total score"
+msgstr "Всего очков"
+
+#. module: gamedesk
+#: model_terms:ir.ui.view,arch_db:gamedesk.gamedesk_game_achievement_form
+#: model_terms:ir.ui.view,arch_db:gamedesk.gamedesk_game_achievement_kanban
+#: model_terms:ir.ui.view,arch_db:gamedesk.gamedesk_game_achievement_wizard_view_form
+#: model_terms:ir.ui.view,arch_db:gamedesk.gamedesk_res_partner_inherit
+msgid "XP"
+msgstr ""
+
+#. module: gamedesk
+#: model_terms:ir.ui.view,arch_db:gamedesk.gamedesk_game_achievement_wizard_view_form
+#: model_terms:ir.ui.view,arch_db:gamedesk.gamedesk_res_partner_inherit
+msgid "description"
+msgstr "Описание"

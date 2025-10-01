@@ -5,14 +5,20 @@
         <field name="sequence">20</field>
     </record>
 
-    <record id="gamedesk_user" model="res.groups">
-        <field name="name">User</field>
+    <record id="gamedesk_seeker" model="res.groups">
+        <field name="name">Seeker</field>
         <field name="category_id" ref="gamedesk_management"/>
+    </record>
+
+    <record id="gamedesk_gm" model="res.groups">
+        <field name="name">Game Master</field>
+        <field name="category_id" ref="gamedesk_management"/>
+	    <field name="implied_ids" eval="[(4, ref('gamedesk_seeker'))]"/>
     </record>
 
     <record id="gamedesk_administrator" model="res.groups">
         <field name="name">Administrator</field>
         <field name="category_id" ref="gamedesk_management"/>
-	    <field name="implied_ids" eval="[(4, ref('gamedesk_user'))]"/>
+	    <field name="implied_ids" eval="[(4, ref('gamedesk_gm'))]"/>
     </record>
 </odoo>

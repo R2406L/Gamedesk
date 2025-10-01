@@ -9,13 +9,63 @@
                 <xpath expr="//notebook" position="inside">
                     <page string="Gamedesk">
                         <group>
+                            <button 
+                                name="gane_achievement" 
+                                string=" Get another one..." 
+                                type="object" 
+                                class="fa fa-trophy btn-secondary" 
+                                attrs="{'invisible':[('is_gm_validation','=',False)]}" 
+                                context="{'default_partner_id': id}"
+                            />
+                            <separator/>
                             <group>
-                                <field name="is_dungeon_master" widget="boolean_toggle" />
+                                <field name="is_admin_validation" invisible="1" />
+                                <field name="is_gm_validation" invisible="1" />
+                                <field name="is_dungeon_master" widget="boolean_toggle" attrs="{'readonly':[('is_admin_validation','=',False)]}" />
+                                <field name="is_dungeon_seeker" widget="boolean_toggle" attrs="{'readonly':[('is_gm_validation','=',False)]}" />
                             </group>
                             <group>
-                                <field name="is_dungeon_seeker" widget="boolean_toggle" />
+                                <label for="ac_score" string="Scores"/>
+                                <div class="o_row">
+                                    <field name="ac_score" style=""/> /
+                                    <field name="total_score"  style="" />  XP
+                                </div>
                             </group>
                         </group>
+                        <field name="achievement_ids">
+                            
+                            <kanban create="false">
+                                <field name="id"/>
+                                <field name="name"/>
+                                <field name="image"/>
+                                <field name="description"/>
+                                <field name="date"/>
+                                <templates>
+                                    <t t-name="kanban-box">
+                                        <div class="row" style="min-height: 75px; min-width: 75px;" data-tooltip="description">
+                                            <div class="col-md-3 d-flex justify-content-center">
+                                                <div class="o_kanban_image" style="width: auto; min-height: 75px; min-width: 75px;">
+                                                    <img alt="Pic" t-att-src="kanban_image('gamedesk.game_seeker_achievement', 'image', record.id.raw_value)"/>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <div style="font-weight: bold; font-size: 1.1em;">
+                                                    <field name="name"/>
+                                                </div>
+                                                <div style="flex: 1"></div>
+                                                <div class="o_row">
+                                                    <div style="font-size: 1.1em;">
+                                                        +<field name="score"/>XP
+                                                    </div>
+                                                    <field name="date" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </t>
+                                </templates>
+                            </kanban>
+
+                        </field>
                     </page>
                 </xpath>
             </field>
