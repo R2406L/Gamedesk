@@ -5,7 +5,7 @@
     'author': "R2406",
     'website': "https://svgun.ru/odoo",
     'category': 'Services',
-    'version': '0.0.1',
+    'version': '0.1.0',
     'license': 'GPL-3',
 
     'depends': ['base', 'mail'],
@@ -20,10 +20,13 @@
 
 	'views/games.xml',
 	'views/engine.xml',
+    'views/achievement.xml',
     'views/setting.xml',
 	'views/_menu.xml',
     
     'views/_inherits/res_partner.xml',
+
+    'views/wizards/achievement.xml',
 	
     ],
 }

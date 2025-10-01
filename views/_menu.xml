@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-    <menuitem id="gamedesk_menu" name="GameDesk" sequence="10" action="gamedesk_games_actions" groups="gamedesk.gamedesk_user"/>
-	<menuitem id="gamedesk_games_menu" name="Games" action="gamedesk_games_actions" parent="gamedesk_menu" sequence="1" groups="gamedesk.gamedesk_user"/>
+    <menuitem id="gamedesk_menu" name="GameDesk" sequence="10" action="gamedesk_games_actions" groups="gamedesk.gamedesk_seeker"/>
+	<menuitem id="gamedesk_games_menu" name="Games" action="gamedesk_games_actions" parent="gamedesk_menu" sequence="1" groups="gamedesk.gamedesk_seeker"/>
 
-        <menuitem id="gamedesk_config_menu" name="Settings" sequence="10" parent="gamedesk_menu" groups="gamedesk.gamedesk_user"/>
-            <menuitem id="gamedesk_games_engine_menu" name="Game engines" action="gamedesk_game_engine_actions" parent="gamedesk_config_menu" sequence="1" groups="gamedesk.gamedesk_user"/>
-            <menuitem id="gamedesk_games_setting_menu" name="Game setting" action="gamedesk_game_setting_actions" parent="gamedesk_config_menu" sequence="2" groups="gamedesk.gamedesk_user"/>
+        <menuitem id="gamedesk_config_menu" name="Settings" sequence="10" parent="gamedesk_menu" groups="gamedesk.gamedesk_seeker"/>
+            <menuitem id="gamedesk_games_engine_menu" name="Game engines" action="gamedesk_game_engine_actions" parent="gamedesk_config_menu" sequence="1" groups="gamedesk.gamedesk_seeker"/>
+            <menuitem id="gamedesk_games_achievement_menu" name="Game achievements" action="gamedesk_game_achievement_actions" parent="gamedesk_config_menu" sequence="2" groups="gamedesk.gamedesk_seeker"/>
+            <menuitem id="gamedesk_games_setting_menu" name="Game setting" action="gamedesk_game_setting_actions" parent="gamedesk_config_menu" sequence="3" groups="gamedesk.gamedesk_seeker"/>
 </odoo>

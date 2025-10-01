@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="gamedesk_game_achievement_wizard_view_form" model="ir.ui.view">
+        <field name="name">Gain achievement form</field>
+        <field name="model">gamedesk.game_achievement.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Gain achievement wizard">
+                <group class="oe_title">
+                    <field name="comment" widget="html" />
+                    <field name="achievement_id">
+                        <kanban create="false" action="action_save" type="object">
+                            <field name="id"/>
+                            <field name="name"/>
+                            <field name="image"/>
+                            <field name="description"/>
+                            <templates>
+                                <t t-name="kanban-box">
+                                    <div class="row" style="min-height: 75px; min-width: 75px;" data-tooltip="description">
+                                        <div class="col-md-3 d-flex justify-content-center">
+                                            <div class="o_kanban_image" style="width: auto; min-height: 75px; min-width: 75px;">
+                                                <img alt="Pic" t-att-src="kanban_image('gamedesk.game_achievement', 'image', record.id.raw_value)"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <div style="font-weight: bold; font-size: 1.1em;">
+                                                <field name="name"/>
+                                            </div>
+                                            <div style="flex: 1"></div>
+                                            <div class="o_row">
+                                                <div style="font-size: 1.1em;">
+                                                    +<field name="score"/>XP
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </t>
+                            </templates>
+                        </kanban>
+                    </field>
+
+                    <field name="partner_id" invisible="1"/>
+                </group>
+                <footer>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/> 
+                    <button name="action_save" string="Submit" type="object" class="btn-primary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="gamedesk_game_achievement_wizard_action" model="ir.actions.act_window">
+        <field name="name">Gain achievement action</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">gamedesk.game_achievement.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="gamedesk_game_achievement_wizard_view_form"/>
+        <field name="target">new</field>
+    </record>
+</odoo>
